@@ -15629,8 +15629,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\diego\\Desktop\\Programacion1\\Laboratorio\\semana3\\MatriculaAlumno\\Views\\Contacto\\index.cshtml",
-      "TargetPath": "Views\\Contacto\\index.cshtml",
+      "FilePath": "c:\\Users\\diego\\Desktop\\Programacion1\\Laboratorio\\semana3\\MatriculaAlumno\\Views\\Registro\\Index.cshtml",
+      "TargetPath": "Views\\Registro\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
