@@ -1,46 +1,47 @@
-@model MatriculaAlumno.Models.Registro
 
+@model IEnumerable<MatriculaAlumno.Models.Registro>
 @{
-    ViewData["Title"] = "Registro";
+    ViewData["Title"] = "Lista";
 }
-    <h1>@ViewData["Title"]</h1>
-<div class="text-center">
-    <h1 class="display-4">Formulario de registro Alumno</h1>
-    <form asp-controller="Registro" asp-action="Create">
-        <label asp-for="Nombres" class="form-label"></label>
-        <input asp-for="Nombres" class="form-control form-control-sm" type="text" placeholder="Escribe un nombre" aria-label=".form-control-sm" />
+ <h1>@ViewData["Title"]</h1>
 
-        <label asp-for="Apellidos" class="control-label"></label>
-        <input asp-for="Apellidos" class="form-control" placeholder="Escribe su apellido" />
+ <p>
+     <a asp-action='Create'>Create New</a>
 
-        <label asp-for="DNI" class="control-label"></label>
-        <input asp-for="DNI" class="form-control" placeholder="Coloce Dni" />
+ </p>
+ <table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.Carrera)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombres)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Genero)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Del</a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Carrera)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genero)
+            </td>
 
-        <label asp-for="FechaNacimiento" class="control-label"></label>
-        <input asp-for="FechaNacimiento" class="form-control"  type='date'/>
-        <div class='genero'>
-        Masculino
-        <input asp-for="Genero" class="gen" type="radio" value="M" />
-        Femenino
-        <input asp-for="Genero" class="gen" type="radio" value="F" />
-            </div>
-       
-         <select asp-for="Carrera" class='carrera'>
-             <option value="ing Computacion Sistemas">ing Computacion Sistemas</option>
-             <option value="ing indistrual">ing indistrual</option>
-             <option value="ing civil">ing civil</option>
-             <option value="Administracion">Administracion</option>
-
-        </select>
-       
-       
-       
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary">Registrar</button> 
-        </div> 
-
-       
-
-    </form>
-    <h2>@ViewData["Message"]</h2>
-</div>
+        </tr>
+}
+    </tbody>
+</table>

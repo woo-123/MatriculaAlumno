@@ -1,0 +1,53 @@
+
+@model MatriculaAlumno.Models.Registro
+
+@{
+    ViewData["Title"] = "Registro";
+}
+    <h1>@ViewData["Title"]</h1>
+<div class="text-center">
+    <h1 class="display-4">Formulario de registro Alumno</h1>
+    <form asp-controller="Registro" asp-action="Create" >
+        <input type="hidden" asp-for="Id" />
+        <label asp-for="Nombres" class="form-label"></label>
+        <input asp-for="Nombres" class="form-control form-control-sm" type="text" placeholder="Escribe un nombre" aria-label=".form-control-sm" />
+
+        <label asp-for="Apellidos" class="control-label"></label>
+        <input asp-for="Apellidos" class="form-control" placeholder="Escribe su apellido" />
+
+        <label asp-for="DNI" class="control-label"></label>
+        <input asp-for="DNI" class="form-control" placeholder="Coloce Dni" />
+
+        <label asp-for="FechaNacimiento" class="control-label"></label>
+        <input asp-for="FechaNacimiento" class="form-control"  type='date'/>
+        <div class='genero'>
+        Masculino
+        <input asp-for="Genero" class="gen" type="radio" value="M" />
+        Femenino
+        <input asp-for="Genero" class="gen" type="radio" value="F" />
+            </div>
+       
+         <select asp-for="Carrera" class='carrera'>
+             <option value="ing Computacion Sistemas">ing Computacion Sistemas</option>
+             <option value="ing indistrual">ing indistrual</option>
+             <option value="ing civil">ing civil</option>
+             <option value="Administracion">Administracion</option>
+
+        </select>
+       
+       
+       
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Registrar</button> 
+        </div> 
+        <br>
+        
+         <p>
+        <a asp-action='Index'>Back to list</a>
+        </p>
+
+       
+
+    </form>
+    <h2>@ViewData["Message"]</h2>
+</div>

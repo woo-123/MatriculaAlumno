@@ -53,3 +53,5 @@ C:\Users\diego\Desktop\Programacion1\Laboratorio\semana3\MatriculaAlumno\bin\Deb
 C:\Users\diego\Desktop\Programacion1\Laboratorio\semana3\MatriculaAlumno\bin\Debug\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\diego\Desktop\Programacion1\Laboratorio\semana3\MatriculaAlumno\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\diego\Desktop\Programacion1\Laboratorio\semana3\MatriculaAlumno\obj\Debug\net5.0\Razor\Views\Registro\Index.cshtml.g.cs
+C:\Users\diego\Desktop\Programacion1\Laboratorio\semana3\MatriculaAlumno\obj\Debug\net5.0\Razor\Views\Registro\create.cshtml.g.cs
+C:\Users\diego\Desktop\Programacion1\Laboratorio\semana3\MatriculaAlumno\obj\Debug\net5.0\Razor\Views\Registro\Edit.cshtml.g.cs
